@@ -26,5 +26,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: LA.BR.1.2.3-09910-8x09.0
-         path: ./LA.BR.1.2.3-09910-8x09.0.zst
+         name: m.zst
+         path: /root/a/Download/m.zst

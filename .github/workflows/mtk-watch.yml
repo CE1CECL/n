@@ -26,5 +26,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: mtk-watch
-         path: ./mtk-watch.zst
+         name: m.zst
+         path: /root/a/Download/m.zst

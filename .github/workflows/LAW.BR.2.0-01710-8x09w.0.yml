@@ -26,5 +26,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: LAW.BR.2.0-01710-8x09w.0
-         path: ./LAW.BR.2.0-01710-8x09w.0.zst
+         name: m.zst
+         path: /root/a/Download/m.zst

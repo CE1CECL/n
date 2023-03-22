@@ -26,5 +26,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: LNX.LA.3.7.2.1-03710-8x16.0
-         path: ./LNX.LA.3.7.2.1-03710-8x16.0.zst
+         name: m.zst
+         path: /root/a/Download/m.zst
