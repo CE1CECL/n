@@ -1,11 +1,11 @@
-name: LAW.BR.2.0-01710-8x09w.0
+name: watch-mtk
 
 on:
  workflow_dispatch:
 
 jobs:
 
-  LAW_BR_2_0-01710-8x09w_0:
+  watch-mtk:
 
     runs-on: ubuntu-20.04
     timeout-minutes: 9999
@@ -18,11 +18,11 @@ jobs:
         tool-cache: true
 
     - name: Download Script.
-      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/LAW.BR.2.0-01710-8x09w.0
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/watch-mtk
     - name: Chmod Script
-      run: sudo chmod 777 -R ./LAW.BR.2.0-01710-8x09w.0
+      run: sudo chmod 777 -R ./watch-mtk
     - name: Run Script
-      run: sudo ./LAW.BR.2.0-01710-8x09w.0
+      run: sudo ./watch-mtk
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
