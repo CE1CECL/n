@@ -645,6 +645,5 @@
   <project path="platform_testing" name="platform/platform_testing" groups="pdk-fs,pdk-cw-fs,cts" remote="aosp" />
 
 
-  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
-
+  
 </manifest>
