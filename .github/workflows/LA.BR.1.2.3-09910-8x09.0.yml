@@ -1,0 +1,24 @@
+name: LA.BR.1.2.3-09910-8x09.0
+
+on:
+ workflow_dispatch:
+
+jobs:
+
+  LA_BR_1_2_3-09910-8x09_0:
+
+    runs-on: ubuntu-20.04
+    timeout-minutes: 9999
+
+    steps:
+    - name: Download Script.
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/LA.BR.1.2.3-09910-8x09.0
+    - name: Chmod Script
+      run: sudo chmod 777 -R ./LA.BR.1.2.3-09910-8x09.0
+    - name: Run Script
+      run: sudo ./LA.BR.1.2.3-09910-8x09.0
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+         name: LA.BR.1.2.3-09910-8x09.0
+         path: ./LA.BR.1.2.3-09910-8x09.0.zst

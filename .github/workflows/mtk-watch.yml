@@ -1,0 +1,24 @@
+name: mtk-watch
+
+on:
+ workflow_dispatch:
+
+jobs:
+
+  mtk-watch:
+
+    runs-on: ubuntu-20.04
+    timeout-minutes: 9999
+
+    steps:
+    - name: Download Script.
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/mtk-watch
+    - name: Chmod Script
+      run: sudo chmod 777 -R ./mtk-watch
+    - name: Run Script
+      run: sudo ./mtk-watch
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+         name: mtk-watch
+         path: ./mtk-watch.zst
