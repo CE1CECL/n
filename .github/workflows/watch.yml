@@ -1,11 +1,11 @@
-name: watch-mtk
+name: watch
 
 on:
  workflow_dispatch:
 
 jobs:
 
-  watch-mtk:
+  watch:
 
     runs-on: ubuntu-20.04
     timeout-minutes: 9999
@@ -18,11 +18,11 @@ jobs:
         tool-cache: true
 
     - name: Download Script.
-      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/watch-mtk
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/watch
     - name: Chmod Script
-      run: sudo chmod 777 -R ./watch-mtk
+      run: sudo chmod 777 -R ./watch
     - name: Run Script
-      run: sudo ./watch-mtk
+      run: sudo ./watch
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
