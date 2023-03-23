@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
          name: m.zst
-         path: /home/runner/m.zst
+         path: /home/runner/m.tar.zst
