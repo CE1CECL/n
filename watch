@@ -12,9 +12,9 @@ cd $HTAP
 rm -rf ./*
 rm -rf ./.*
 echo "maybe so" > yes.no
-mkdir -p LAW.BR.2.0-01710-8x09w.0
-cd LAW.BR.2.0-01710-8x09w.0
-repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m LAW.BR.2.0-01710-8x09w.0.xml
+mkdir -p watch
+cd watch
+repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m watch.xml
 repo sync -j$(nproc) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify  
 rm -rf ./.repo
 cd $HTAP
