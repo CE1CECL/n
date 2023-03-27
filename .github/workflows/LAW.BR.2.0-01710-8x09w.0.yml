@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  LAW_BR_2_0-01710-8x09w_0:
+  a:
 
     runs-on: ubuntu-20.04
     timeout-minutes: 9999

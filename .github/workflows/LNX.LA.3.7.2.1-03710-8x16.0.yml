@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  LNX_LA_3_7_2_1-03710-8x16_0:
+  a:
 
     runs-on: ubuntu-20.04
     timeout-minutes: 9999

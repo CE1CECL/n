@@ -1,4 +1,4 @@
-name: LA.BR.1.2.3-09910-8x09.0
+name: LA.BR.1.2.9.c26-04200-8x09.0
 
 on:
  workflow_dispatch:
@@ -18,11 +18,11 @@ jobs:
         tool-cache: true
 
     - name: Download Script.
-      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/LA.BR.1.2.3-09910-8x09.0
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/LA.BR.1.2.9.c26-04200-8x09.0
     - name: Chmod Script
-      run: sudo chmod 777 -R ./LA.BR.1.2.3-09910-8x09.0
+      run: sudo chmod 777 -R ./LA.BR.1.2.9.c26-04200-8x09.0
     - name: Run Script
-      run: sudo ./LA.BR.1.2.3-09910-8x09.0
+      run: sudo ./LA.BR.1.2.9.c26-04200-8x09.0
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
