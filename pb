@@ -1,0 +1,23 @@
+apt update
+apt install -y zstd
+cd
+mkdir a
+cd a
+wget http://raw.githubusercontent.com/CE1CECL/n/main/repo
+cp -rf ./repo /usr/bin/repo
+chmod 777 -R /usr/bin/repo
+export HTAP=$PWD/Download/
+mkdir -p $HTAP
+cd $HTAP
+rm -rf ./*
+rm -rf ./.*
+echo "maybe so" > yes.no
+mkdir -p pb
+cd pb
+repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m pb.xml
+repo sync -j$(nproc --all) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify
+rm -rf ./.repo
+cd $HTAP
+rm -rf $HTAP/yes.no
+tar -I 'zstd --ultra -22 -T0 -r --format=zstd' -c -f '/home/runner/m.tar.zst' './'
+chmod 777 -R /home/runner/m.tar.zst
