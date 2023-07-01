@@ -1134,9 +1134,6 @@
   <project path="pdk" name="platform/pdk" groups="pdk" />
   <project path="platform_testing" name="platform/platform_testing" groups="pdk-fs,pdk-cw-fs,cts" />
 
-  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
-
-
   <!--
     Merge marker to make it easier for git to merge AOSP-only manifest
     changes to a custom manifest.  Please keep this marker here and
