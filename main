@@ -12,9 +12,9 @@ cd $HTAP
 rm -rf ./*
 rm -rf ./.*
 echo "maybe so" > yes.no
-mkdir -p master
-cd master
-repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m master.xml
+mkdir -p main
+cd main
+repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m main.xml
 repo sync -j$(nproc --all) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify
 rm -rf ./.repo
 cd $HTAP
