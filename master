@@ -15,7 +15,7 @@ echo "maybe so" > yes.no
 mkdir -p master
 cd master
 repo init -u http://github.com/CE1CECL/n
-repo sync -j$(nproc)
+repo sync -j$(nproc --all)
 cd $HTAP
 tar -I 'zstd --ultra -22 -v -T0 -r --format=zstd' -c -v -f '/home/runner/m.tar.zst' './'
 chmod 777 -R /home/runner/m.tar.zst
