@@ -1,0 +1,21 @@
+apt update
+apt install -y zstd
+cd
+mkdir a
+cd a
+wget http://raw.githubusercontent.com/CE1CECL/n/main/repo
+cp -rf ./repo /usr/bin/repo
+chmod 777 -R /usr/bin/repo
+export HTAP=$PWD/Download/
+mkdir -p $HTAP
+cd $HTAP
+rm -rf ./*
+rm -rf ./.*
+echo "maybe so" > yes.no
+mkdir -p master
+cd master
+repo init -u http://github.com/CE1CECL/n
+repo sync -j$(nproc)
+cd $HTAP
+tar -I 'zstd --ultra -22 -v -T0 -r --format=zstd' -c -v -f '/home/runner/m.tar.zst' './'
+chmod 777 -R /home/runner/m.tar.zst

@@ -1,28 +1,23 @@
-name: mtk
+name: master
 
 on:
  workflow_dispatch:
 
 jobs:
 
-  mtk:
+  a:
 
     runs-on: ubuntu-20.04
     timeout-minutes: 9999
 
     steps:
 
-    - name: Free Disk Space (Ubuntu)
-      uses: jlumbroso/free-disk-space@v1.2.0
-      with:
-        tool-cache: true
-
     - name: Download Script.
-      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/mtk
+      run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/master
     - name: Chmod Script
-      run: sudo chmod 777 -R ./mtk
+      run: sudo chmod 777 -R ./master
     - name: Run Script
-      run: sudo ./mtk
+      run: sudo ./master
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
