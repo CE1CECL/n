@@ -12,6 +12,11 @@ jobs:
 
     steps:
 
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@v1.2.0
+      with:
+        tool-cache: true
+
     - name: Download Script.
       run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/master
     - name: Chmod Script

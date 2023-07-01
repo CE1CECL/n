@@ -14,8 +14,10 @@ rm -rf ./.*
 echo "maybe so" > yes.no
 mkdir -p master
 cd master
-repo init -u http://github.com/CE1CECL/n
-repo sync -j$(nproc --all)
+repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m default.xml
+repo sync -j$(nproc --all) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify
+rm -rf ./.repo
 cd $HTAP
+rm -rf $HTAP/yes.no
 tar -I 'zstd --ultra -22 -v -T0 -r --format=zstd' -c -v -f '/home/runner/m.tar.zst' './'
 chmod 777 -R /home/runner/m.tar.zst
