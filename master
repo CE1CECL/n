@@ -17,7 +17,7 @@ cd master
 repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m master.xml
 repo sync -j$(nproc --all) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify
 rm -vrf ./.repo
-cd $HTAP
+cd $HTAP/master/
 rm -vrf $HTAP/yes.no
 tar -I 'zstd --ultra -22 -v -T0 -r --format=zstd' -c -v -f '/home/runner/master.tar.zst' './'
 chmod 7777 -vR /home/runner/master.tar.zst

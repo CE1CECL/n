@@ -17,7 +17,7 @@ cd pb
 repo init -u http://github.com/CE1CECL/n -c --no-tags --dissociate --partial-clone --no-use-superproject --no-clone-bundle --no-git-lfs --no-repo-verify -m pb.xml
 repo sync -j$(nproc --all) --fail-fast --nmu -d -c --no-clone-bundle --no-use-superproject --no-tags --prune --no-repo-verify
 rm -vrf ./.repo
-cd $HTAP
+cd $HTAP/pb/
 rm -vrf $HTAP/yes.no
 tar -I 'zstd --ultra -22 -v -T0 -r --format=zstd' -c -v -f '/home/runner/pb.tar.zst' './'
 chmod 7777 -vR /home/runner/pb.tar.zst
