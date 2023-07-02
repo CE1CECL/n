@@ -20,11 +20,11 @@ jobs:
     - name: Download Script.
       run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/prebuilts
     - name: Chmod Script
-      run: sudo chmod 777 -R ./prebuilts
+      run: sudo chmod 7777 -vR ./prebuilts
     - name: Run Script
       run: sudo ./prebuilts
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: m.tar.zst
-         path: /home/runner/m.tar.zst
+         name: prebuilts.tar.zst
+         path: /home/runner/prebuilts.tar.zst

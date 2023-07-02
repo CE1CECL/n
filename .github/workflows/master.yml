@@ -20,11 +20,11 @@ jobs:
     - name: Download Script.
       run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/master
     - name: Chmod Script
-      run: sudo chmod 777 -R ./master
+      run: sudo chmod 7777 -vR ./master
     - name: Run Script
       run: sudo ./master
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: m.tar.zst
-         path: /home/runner/m.tar.zst
+         name: master.tar.zst
+         path: /home/runner/master.tar.zst

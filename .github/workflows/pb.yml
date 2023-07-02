@@ -20,11 +20,11 @@ jobs:
     - name: Download Script.
       run: sudo wget http://raw.githubusercontent.com/CE1CECL/n/main/pb
     - name: Chmod Script
-      run: sudo chmod 777 -R ./pb
+      run: sudo chmod 7777 -vR ./pb
     - name: Run Script
       run: sudo ./pb
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-         name: m.tar.zst
-         path: /home/runner/m.tar.zst
+         name: pb.tar.zst
+         path: /home/runner/pb.tar.zst
